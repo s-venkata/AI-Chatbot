@@ -1,0 +1,118 @@
+{
+    "topics": [
+      "Information Retrieval and Similarity",
+      "AI and ML",
+      "Neurons",
+      "Neural Networks",
+      "Architecture of MMDBS"
+    ],
+    "key_concepts": [
+      {
+        "title": "Information Retrieval",
+        "description": "Science of searching for information in a document, metadata, and databases of texts, images, sounds, and videos.",
+        "process": ["Query Representation", "Matching", "Result Similarity"]
+      },
+      {
+        "title": "Vector Space Model",
+        "concepts": [
+          "Query and document represented as vectors.",
+          "Matching by computing cosine similarity.",
+          "Ranking based on cosine values in descending order."
+        ]
+      },
+      {
+        "title": "Similarity Models",
+        "approaches": [
+          {
+            "name": "Metric Models",
+            "methods": ["Euclidean Distance", "Minkowsky Distance"]
+          },
+          {
+            "name": "Cosine Similarity",
+            "formula": "cos θ = (d • q) / (|d| |q|)"
+          }
+        ]
+      },
+      {
+        "title": "Exercises",
+        "examples": [
+          {
+            "task": "Compute similarity for query q(7,1,0) and pictures p1(0,6,6), p2(5,2,0).",
+            "method": "Cosine or distance-based ranking."
+          },
+          {
+            "task": "Compare sentences using cosine similarity.",
+            "examples": ["this is a test vs the test is nonsense", "this is a test vs I go home"]
+          }
+        ]
+      },
+      {
+        "title": "Neural Networks",
+        "principles": [
+          "Network of highly connected units (neurons).",
+          "Learning via forward propagation and error correction (backpropagation).",
+          "Inspired by human brain structure."
+        ],
+        "components": ["Dendrites (Input)", "Synapses (Output)", "Axon (Signal transmission)"],
+        "applications": [
+          "Decision-making tasks (e.g., animal recognition).",
+          "Logical functions (AND, OR)."
+        ]
+      },
+      {
+        "title": "Training Neural Networks",
+        "steps": [
+          "Initialize weights randomly.",
+          "Propagate inputs forward to calculate output.",
+          "Compute error and propagate backward to adjust weights.",
+          "Iterate until error is minimized."
+        ],
+        "learning_parameters": {
+          "learning_rate": "Typically between 0.1 and 0.8.",
+          "loss_functions": ["Mean Squared Error", "Absolute Error"]
+        }
+      },
+      {
+        "title": "Deep Learning",
+        "features": [
+          "End-to-end learning directly from raw data.",
+          "Used for tasks like object recognition, voice translation, and autonomous driving."
+        ]
+      },
+      {
+        "title": "Similarity Search with AI",
+        "advancements": [
+          "Machine Learning (ML) and Deep Learning (DL) improve multimedia search.",
+          "AI extracts semantic metadata and performs similarity queries efficiently."
+        ]
+      },
+      {
+        "title": "Architectures of MMDBMS",
+        "models": [
+          {
+            "name": "Deprecated",
+            "description": "All data lies within the database."
+          },
+          {
+            "name": "Modern",
+            "description": "Metadata extraction and AI-based similarity search done externally."
+          }
+        ]
+      },
+      {
+        "title": "Vector Databases",
+        "features": [
+          "Efficient for similarity search in vectorized data.",
+          "AI extracts embeddings for multimedia content."
+        ]
+      }
+    ],
+    "conclusion": {
+      "key_points": [
+        "Content-based search is typically similarity search.",
+        "AI/ML/DL is crucial for semantic metadata extraction and classification.",
+        "High-quality training data is essential for effective learning."
+      ]
+    }
+  }
+  

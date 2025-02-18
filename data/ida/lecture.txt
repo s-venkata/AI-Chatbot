@@ -1,0 +1,1360 @@
+
+Course Topics
+interactive distributed
+user interfaces computer networks
+Internet
+technology services applications
+  slide 1
+5 ECTS Credits are 150 Hours of Work
+NO literature reviews
+NO papers to turn in
+BUT follow-up work after each class
+ revisit all examples, redo all demos on your computer
+ recap your learning outcomes
+ explain them to your fellow students
+ prepare questions for next class
+AND implement all exercises on your computer
+  slide 2
+Objectives
+ to recognize the Internet as a world-wide network
+infrastructure and to be able to explain, evaluate and
+exploit its services
+ to appreciate the World Wide Web as an interactive
+distributed system and to be familiar with Web
+technologies
+ to recognize applications as the decisive factor within the
+Internet and to think about new applications
+ to set the context for self-guided learning on demand
+  slide 3
+Course Organization
+ slides + notes + examples + demonstrations
+ slide copies, examples, messages in Moodle
+ computer-based exercises
+ written exam (90 min, cheat sheet provided)
+! These are just slides. It is very important to take
+notes for all explanations and demonstrations during
+the lectures.
+  slide 4
+Web Links
+ searchable RFC archive
+• https://datatracker.ietf.org/
+ Internet well-known ports
+• https://www.iana.org/assignments/port-numbers
+ Vannevar Bush: As We May Think. In: The Atlantic
+Monthly, July 1945
+• https://www.w3.org/History/1945/vbush/vbush-
+all.shtml
+  slide 5
+Web Links (2)
+ World Wide Web Consortium (W3C)
+• https://www.w3.org/
+• local search: " HTML5", "CSS", "XHTML 1.0 DTD"
+ markup validation service of the W3C
+• https://validator.w3.org/
+• https://jigsaw.w3.org/css-validator/
+ JavaScript, HTML, CSS, HTTP for Web developers
+• https://developer.mozilla.org/docs/Web
+  slide 6
+Web Links (3)
+ browser compatibility
+• https://caniuse.com/
+ PHP reference
+• https://php.net/
+ collection of XMLapplications
+• http://xml.coverpages.org/siteIndex.html#toc-
+applications
+  slide 7
+Web Links (4)
+ XML Copy Editor
+• http://xml-copy-editor.sourceforge.net/
+ syntax check of DTDs
+• https://www.xmlvalidation.com
+  slide 8
+Contents
+ Internet Services
+ The World Wide Web
+• Protocol WWW System
+• Page Description HTML
+• Server Static vs. Dynamic Web Pages (CGI/C, PHP)
+• Client CSS, JavaScript
+• Structuring Information Extensible Markup Language (XML)
+ Applications
+ Outlook
+ Q&A, Feedback
+ Appendix A: HTML, JavaScript, CSS examples
+ Appendix B: CGI/C and PHP examples
+ Appendix C: XML examples
+  slide 9
+Internet Services
+The building blocks of the
+application
+Objectives
+ to recognize Internet services as the first interface to
+the end user
+ to understand the basic architecture of Internet
+services
+  slide 11
+Internet Layers
+services: Email, WWW, …
+finger smtp http … application
+protocols:
+TCP UDP transport
+Internet
+IP
+network
+host-to-net
+PPP LAN protocols
+physical & datalink
+  slide12
+Protocol Standards
+ a defined set of rules and formats for computer
+communication is called a protocol
+ the functionality of each layer is implemented
+employing the respective protocol and provided as a
+service to upper layers
+ without international standards for protocols, world-
+wide communication would not be possible (Internet:
+"Request for Comments", RFC)
+  slide 13
+Client-Server Architecture of Internet Services
+ida
+finger ida@info.. Login: Inter... fingerd
+finger client finger protocol finger server
+  slide 14
+97
+trop
+info.mi.
+hs-offenburg.de
+request
+response
+Telnet (SSH)
+telnet host
+ interactive, text-based login to remote computers
+("remote login")
+• network connection from Telnet client (local host) to Telnet
+server (remote host)
+• local input is transmitted to remote host
+• remote output is transmitted to local host
+ Unix command line ("shell")
+• man command, ls –l, echo, cat, more, mkdir,
+cd, pwd, mv, cp, rm, logout
+• ~ .. .
+• stdin < stdout > >> pipe(line)s |
+  slide 15
+Exercise "Telnet (SSH)"
+ From your PC, login to host info.mi.hs-
+offenburg.de as user ida.
+Create a text file (make up an unambiguous file name
+from your personal name). Display the file and log
+out.
+  slide 16
+Telnet (2)
+telnet host port
+ "generic client"
+• Internet protocols within the application layer employ
+character streams!
+• use Telnet as a character-transmitting connection
+  slide 17
+Exercise "Telnet as a Generic Client"
+ Retrieve information on users currently logged in at
+info.mi, using the finger client on a (Windows)
+command line.
+ Do the same thing by executing the finger protocol
+using generic Telnet.
+ Some Unix computers offer a service called "daytime"
+that responds with the current local time. The
+daytime protocol defines that a connect to the
+daytime server is a daytime request.
+Your PC does not implement a daytime client.
+Nevertheless, determine the local time within another
+country.
+  slide 18
+FTP (SFTP)
+ (command line: ftp host)
+ GUI FTP clients
+ file transfer between local and remote computers
+(File Transfer Protocol)
+• "upload" to, "download" from remote host
+  slide19
+Exercise "FTP"
+ Download the file that you created during the Telnet
+exercise to your local PC.
+ Write a new text file on your local PC, upload it to
+info.mi and display it there on the command line.
+  slide 20
+Intermediate Test "Internet Services"
+ Show the architecture of the Internet service WWW
+in a diagram (use developer.mozilla.org in
+your drawing). Make sure to use all important terms
+in their specific form for the WWW.
+ Which parts of your diagram belong to the application
+layer, which part is relevant to the transport layer,
+which two parts are relevant to the Internet layer?
+  slide 21
+Objectives Revisited
+ to recognize Internet services as the first interface to
+the end user
+ to understand the basic architecture of Internet
+services
+  slide 22
+The World Wide Web
+Interactive and distributed
+Objectives
+ to recognize the World Wide Web as an interactive
+distributed system drawing on both areas, user
+interfaces and computer networks
+ to classify the WWW as an Internet service
+ to know how the Web works
+ to understand the various Web technologies and to
+be able to employ them in an application-driven way
+  slide 24
+The WWW is...
+ the Internet "killer application (service)"
+ another evidence for the UI's importance
+ intuitive through point-and-click
+ a hyper structure through HTML
+ two-way through forms
+ another Internet service
+ a client-server system using HTTP above TCP/IP
+  slide 25
+...and...
+ open
+• to different platforms
+open standards (TCP/IP, HTTP, HTML,...)
+
+• to any multimedia format
+MIME ("Multipurpose Internet Mail Extensions"),
+
+plug-ins
+• to external IT systems
+client: plug-ins, JavaScript, ...
+
+server: CGI, PHP, Node.js, ...
+
+  slide 26
+Hypertext
+ "non-linear text", associative structure
+ information entities (pages, nodes)
+ links (hyperlinks)
+• source
+• destination
+  slide 27
+URL
+ Uniform Resource Locator
+ more general: Uniform Resource Identifier URI
+ unique address of/within a information entity
+ link in HTML
+• <a href="destination">source</a>
+ spanning host boundaries by specifying the
+destination host
+  slide 28
+URL (2)
+ basic structure
+protocol://destination_host/description
+• https://info.mi.hs-offenburg.de/
+~tom/Misc/index.html
+• info.mi.hs-offenburg.de/~tom/Misc/
+• file:///C|/WINDOWS/win.ini
+  slide 29
+WWW System
+Protocol
+HTTP
+WWW Client
+(Browser)
+WWW Server
+ retrieve a (multimedia) information item:
+Hypertext Transfer Protocol
+  slide 30
+After Clicking on...
+"Hello …" in the yellow Web page
+1.the browser determines the URL https://info.
+mi.hs-offenburg.de/~tom/red.html from the
+page source
+2.the browser opens a connection to port 80 at host
+info.mi.hs-offenburg.de
+3.the browser sends the HTTP request
+GET /~tom/red.html HTTP/1.1
+Host: info.mi.hs-offenburg.de
+empty line
+  slide 31
+After Clicking on... (2)
+4.the server sends the file red.html within its HTTP
+response
+5.the server closes the TCP connection (after time-out)
+6.the browser displays the text of red.html
+7.the browser subsequently retrieves all the images,…
+within red.html in the same way and displays them
+Web servers are very picky about correct requests. Even
+
+a redundant space at the end of a line will result in an
+error message. Keep this in mind when you try this
+demo for yourself.
+  slide 32
+HTTP(S)
+ is a stateless protocol
+• transport layer connect,
+HTTP request, response, …,
+transport layer disconnect
+ HTTPS employs TLS between application layer and
+transport layer
+ transfers data (Web pages, images, …) of any type
+• type named within MIME header
+• HTTP supports binary transfer
+  slide 33
+HTTP/2
+[c‘t20/2018]
+  slide 34
+HTTP/2 vs HTTP/3
+ HTTP/2 - transport layer TCP
+ HTTP/3 transport layer QUIC (Quick UDP Internet
+Connections)
+• connection-oriented over UDP
+• multiplexing on the transport layer
+• integrates TLS
+  slide 35
+HTTP Request
+ request line (REST APIs)
+GET, POST, PUT, DELETE, ...
+ request header
+Host:, User-Agent:, Cookie:, ...
+ empty line
+ entity body
+e.g. form entries with POST
+  slide 36
+HTTP Response
+ status line
+status code (2XX: Success, 3XX: Redirection,
+4XX: Client Error, 5XX: Server Error)
+ response header
+Content-Type:, Last-Modified:, Refresh:,
+Location:, Set-Cookie:, ...
+ empty line
+ entity body
+object (Web page, file)
+  slide 37
+Exercise "HTTP"
+ Retrieve the Web page with the URL
+https://info.mi.hs-offenburg.de/tom/Misc/index.html
+by executing HTTP over a generic telnet connection.
+Note: For this purpose, it is necessary to interpret the HTTP
+response carefully. Store the page in a file and display it within
+a Web browser (after removing the HTTP parts).
+ Now, retrieve the same page with Firefox, having the developer
+tools open, and cache deactivated checked. What do you
+observe?
+  slide 38
+HTML
+Page Description
+ Hypertext Markup Language
+ is the page description language of the Web
+ is not a programming language
+ describes Web pages in textual form
+• HTML: these are <em>three important
+words</em> !
+• browser:these are three important words !
+  slide 39
+Logical Structure and Layout Rules …
+1. logical structure of a document
+• chapter, heading, paragraph, enumeration, figure,
+emphasis, …
+2. is translated into
+• style (layout rules)
+3. layout structure (physical representation)
+• (page,) text block, line, font, alignment, color, …
+separation of logical document description and style
+description
+  slide 40
+… in the World Wide Web
+1. logical structure of a document and
+• HTML source
+2. styles
+• Cascading Style Sheets
+• (browser-specific layout rules)
+3. are interpreted by the Web browser for presentation
+ HTML versions: 1.0, 2.0, 3.2, 4.01, 5, XHTML 1.0, 1.1
+  slide 41
+Tags
+ tags (markups) define elements within a Web page
+and are enclosed in pointed brackets
+• start tag (< … >) and end tag (</ … >)
+• lower case
+• with named parameters (attributes) and assignment of
+values with ="…"
+• properly nested, e.g. basic structure of a Web page:
+  slide 42
+Structure of HTML Sources
+ identification as an HTML document
+<html lang="en">
+• encloses complete source
+ header section
+<head> … </head>
+• instructions related to the whole document
+ main body
+<body> … </body>
+</html>
+  slide 43
+Basic Tags
+ titel
+<title> … </title>
+• related to the whole page, part of the header
+• appears in window title bar and within bookmarks
+ headings
+<h1> … </h1>,… <h6>...</h6>
+• 6 levels of hierarchy
+ paragraphs
+<p> … </p>
+  slide 44
+Basic Tags (2)
+ ordered list
+<ol> … </ol>
+• type of numbers with CSS
+ unordered list
+<ul> … </ul>
+• bullet symbol with CSS
+ list item
+<li> … </li>
+• also mandatory for a nested list
+  slide 45
+Core Attributes
+ can be used with any tag
+• unique identifier of a element
+id="…"
+• name of an element
+title="…"
+  slide 46
+Logical Styles
+ describe the enclosed text element logically
+ physical presentation is realized within the
+browser/CSS
+<em> … </em>
+<strong> … </strong>
+<samp> … </samp>
+<dfn> … </dfn>
+  slide 47
+Special Characters
+ "character entities"
+• named
+&Auml; &auml; &szlig; &agrave; …
+• numerical (ISO-Latin-1/Unicode)
+&#196; &#228; …
+• reserved characters
+&lt; &gt; &amp; &quot; &nbsp; &euro; …
+  slide 48
+Declaring a Web Page
+ correct document type
+<!DOCTYPE html>
+ character set (within header section)
+<meta charset="UTF-8">
+ comments
+<!-- author, date, … -->
+• may span several lines
+page1.html
+  slide 49
+Page Formatting
+ line break
+<br>
+ horizontal ruler
+<hr>
+ preformatted text
+<pre> … </pre>
+ grouping of elements
+<div> … </div>
+ text-level spans
+<span> … </span>
+  slide 50
+Links
+ Web
+• = information entities + links
+• = "Hypertext"
+ link = source + destination
+<a> … </a>
+• encloses anchor (text, image, …) being the link source
+• attribute href="destination_URL" defines link
+destination
+  slide 51
+Local Link Destination
+ absolute path name
+• access path through complete folder hierarchy, always
+starts with /
+• e.g. href="/assets/images/logo.gif"
+ relative path name
+• relative to the location of the HTML document
+containing the link
+• e.g. href="info.html"
+(hires/company.gif, ../../main/main.html)
+• portable!
+  slide 52
+Remote Link Destination
+ complete URL (Uniform Resource Locator)
+protocol://host_name/path
+• diverse Internet services (protocols)
+• any document type (file extensions)
+• e.g. href="https://www.hs-offenburg.de/
+mi/mi.html"
+• special characters within URLs
+ with %ASCIICode e.g. %20 ( ), %3f (?), %2f (/)
+ e.g. href="https://my.sys.de/
+bad%20name%3f.html"
+  slide 53
+Link Destination
+ is an element within a page
+• using the id of the element after #
+• e.g. href="mi.html#People"
+ opens in a new window
+• attribute target="window_name" for a named and
+reused browser window
+• always a new window with attribute value _blank
+page2.html
+  slide 54
+Images
+ images
+<img>
+• attributes
+src="image_URL" alt="description"
+height="pixels" width="pixels"
+ as link sources
+• "image links", "clickable images"
+• nesting image tag within anchor tag
+ external images page3.html
+• new page for link destination
+  slide 55
+Multimedia Contents and Semantic Elements
+ embedding multimedia content
+<iframe>, <canvas>, <video>, <audio>
+ embedding content in dedicated markup
+<svg>, <math>
+ semantic elements
+<header>, <footer>, <section>, <article>,
+<nav>, …
+  slide 56
+Creating HTML Documents
+1.
+2.
+3.
+4.
+  slide 57
+Checking HTML Source Code
+ W3C Validator
+ Firefox Web Developer
+  slide 58
+Exercise "HTML"
+ Create a few linked HTML pages using your favorite text editor.
+Make use of the tags and attributes that have been discussed
+so far.
+ Display the pages locally within a Web browser.
+ Validate your pages at https://validator.w3.org
+ Examine the page structure using the Web Developer tools.
+ Transfer the pages into a personal subdirectory of
+public_html, account ida on info.mi using a graphical
+FTP client, and retrieve them with your Web browser.
+  slide 59
+Forms
+ user feedback
+<form> … </form>
+• attributes method="post" (get)
+action="script_URL"
+ UI elements
+<input>
+• attributes type="text" (password, radio,
+checkbox, hidden, submit, reset, button,
+file, number, email, date, …)
+name="element_name" value="value"
+checked placeholder required min max …
+  slide 60
+Forms (2)
+ structuring forms
+<label> … </label>
+• associates a UI element with text (including markup)
+<fieldset>
+<legend> … </legend>
+…
+</fieldset>
+• groups UI elements and other HTML elements
+• labels the group
+form.html
+  slide 61
+Exercise "Forms"
+ Develop an order form for a product of your choice. Make use
+of the UI elements on the previous slides. Use the script
+/~tom/formGetPost.php on the host info.mi as the
+action value.
+ Display the pages locally within a Web browser.
+ Validate your pages at https://validator.w3.org
+ Examine the page structure using the Web Developer tools.
+ Transfer the pages into a personal subdirectory of
+public_html, account ida on info.mi using a graphical
+FTP client, and retrieve them with your Web browser.
+  slide 62
+Static/Dynamic Web Resources
+Server
+referring to the time of the request to the Web server
+ static
+• resource exists as a file
+• e.g. image, style sheet, JavaScript framework, …
+ dynamic
+• resource is created by a server-side program
+• e.g. HTML source code, image, …
+  slide 63
+Common Gateway Interface (CGI)
+ between Web server and CGI script to dynamically
+create MIME objects
+ advantages
+• supported by all Web servers
+• to be used with any programming language
+• CGI script implements "gateway" to external software
+• RFC3875
+• fast when using FastCGI
+! true understanding of dynamic Web applications
+  slide 64
+CGI Execution
+script path,
+URL arguments,
+form input
+Web
+browser
+server
+MIME object
+MIME object URL arguments,
+form input
+CGI
+CGI
+script
+external
+process API program
+"gateway"
+interprocesscommunication
+65
+Employing CGI Scripts from HTML Code
+ script URLs
+• <a href="script URL">
+• <form action="script URL">
+• <img src="script URL">
+ recognized on the Web server by folder name
+(e.g. cgi-bin/) or extension (e.g. .php)
+  slide 66
+Implementing CGI Scripts
+1. write source code (e.g. on a PC) in a programming
+language of your choice,
+2. transfer it to the Web server,
+3. compile it on the server,
+4. identify executable as CGI script (folder or extension,
+resp.), and
+5. grant execution rights for the user associated with
+the Web server process
+  slide 67
+a) CGI – Output
+to the Web server via standard out
+ as a MIME object
+• Content-Type: text/plain, text/html,
+image/gif,…
+• empty line
+• entity body
+  slide 68
+Examples "CGI Output"
+ a dynamically created HTML page to display the
+current date and time
+date.html
+  slide 69
+Exercise "CGI Output"
+ Implement a CGI script in C that displays all users
+currently logged in on the Web server.
+Hint: Make use of the shell command "who" and the
+HTML <pre> element to keep the output in columns.
+Make your own subdirectory in
+public_html/cgi-bin/!
+ Call this script from the address line of your browser.
+  slide 70
+b) CGI – Environment Variables
+from the Web server via global variables:
+ client
+• HTTP_USER_AGENT, REMOTE_ADDR,
+HTTP_COOKIE, …
+ request
+• REQUEST_METHOD, QUERY_STRING,
+CONTENT_LENGTH, …
+ server
+• SERVER_SOFTWARE, SERVER_NAME, …
+  slide 71
+c) CGI – Input via URL Arguments
+ URL arguments are located after ?
+• e.g.
+https://info.mi.hs-offenburg.de/tom/
+cgi-bin/getmydate?IDA
+ server-side environment variable QUERY_STRING
+• e.g.
+QUERY_STRING=IDA
+date.html
+  slide 72
+Exercise "CGI Input via URL Arguments"
+ Write down the source code for a CGI script
+url_argument.c that is called by the URL
+https://info.mi.hs-offenburg.de/~ida/cgi-
+bin/yourSubdirectory/url_argument?number
+and creates an HTML heading level numberwith the
+text content "I am a heading level number". (number
+is a placeholder for an integer between one and six.)
+  slide 73
+d) CGI – Input via Form Fields
+ encoding of form input by the browser as
+name/value pairs:
+name1=value1&name2=value2&…
+e.g. theName=Tom+R&thePasswd=&theSize=small
+ transferred to the Web server with method="get"
+as URL argument or
+ transferred to the Web server with method="post"
+as entity body of the HTTP request
+from the Web server to the script via standard in
+(CONTENT_LENGTH specifies number of characters)
+  slide 74
+Intermediate Test "WWW System"
+TOC
+ On the Web server sell.stuff.net, in the
+public_html directory of the user salesman, there is
+an HTML form with the following lines
+<form action="cgi-bin/justDoIt">
+<input type="checkbox" name="agree" value="yes">
+ How can you use telnet in the console of your computer
+to make the Web server believe that this form was sent
+with the checkbox confirmed?
+ What is the full URL you need to enter in the address line
+of a browser to achieve the same?
+  slide 75
+Example "CGI Input via Form Fields"
+ asterisks pattern in a dynamic Web page
+asterisks.html
+  slide 76
+CGI Execution Technically
+GET request
+POST request
+Web
+browser
+server
+HTTP response
+standard environment variables,
+out standard in
+CGI
+CGI
+script
+external
+process API program
+"gateway"
+interprocesscommunication
+77
+Intermediate Test "CGI"
+ Write down the source code superwho.c for a CGI
+script that creates a heading "Hello" followed by a
+paragraph with the text "I am " and two links
+"Superman" and "Superwoman". The links call the
+same script again, this time matching the heading to
+the link clicked: "Hello Superman" and "Hello
+Superwoman" respectively.
+ The generated web page must validate according to
+HTML5 without errors.
+  slide 78
+CGI Alternatives
+ disadvantages of CGI in C
+• static parts of Web pages have to be created by
+program statements
+• no HTML editors can be used
+"server-parsed HTML"
+• static HTML template +
+dynamically computed parts
+  slide 79
+PHP
+ PHP: Hypertext Preprocessor
+<?php … ?>
+ C/Java syntax, but
+• $variablenname, without data type
+• echo to standard out (a)
+• header()
+• . for string concatenation
+date.html
+  slide 80
+Form Processing in PHP
+ environment variables (b) and URL arguments (c)
+and form fields (d) in associative arrays
+• $_SERVER ['QUERY_STRING']
+• $_GET['theName']
+• $_POST['theName']
+• isset(), empty()
+pizza.html
+  slide 81
+Exercise "PHP"
+ For your order form from the exercise "Forms", write
+a PHP script that displays an order confirmation in the
+browser. Store this PHP script in the same folder as
+your order form.
+Notice: If you implement a POST form, the URL of
+the action attribute must contain the tilde ~
+character, because a redirect (cf. the exercise
+"HTTP") always leads to a GET request.
+ Check that the generated order confirmation validates
+according to HTML5.
+  slide 82
+Passing State Information
+ in HTTP via
+• URL arguments stateURL.php !
+• form fields stateForm.php!
+stateFormHidden.php
+• cookies stateCookie.php
+• PHP manages $_SESSION[] and associated session
+id automatically, using URL arguments or cookies
+  slide 83
+Intermediate Test "PHP – Form Fields"
+ Write a PHP script login.php that creates a form with a
+heading and a text input field. When the script is first
+called (isset()), the heading reads "What is your
+name?" When a name is then entered, the form reappears
+and the heading reads "Hello Name." If the form is
+submitted without entering a name (empty()), the
+heading on top of the form will read "Hello Nobody!"
+ The name entered must not be visible in the browser
+address line.
+ The generated web page must validate according to
+HTML5 without errors.
+  slide 84
+Intermediate Test "PHP – URL Arguments"
+ Implement the intermediate test "CGI" in PHP.
+ The generated web page must validate according to
+HTML5 without errors.
+  slide 85
+Cascading Style Sheets (CSS)
+Client
+ layout rules ("style sheet")
+• translation of logical document structure (HTML
+source) into physical presentation
+ Cascading Style Sheets
+• often, several layout rules are applicable (e.g. as a
+single HTML element, as an element type, as a nested
+element etc.)
+• "cascade" defines precedence
+ objectives
+• separation of logical structure and layout
+• comprehensive control over the page design
+  slide 86
+Layout Rule
+selector {
+style_property1: value1; /*declaration1*/
+style_property2: value2; /*declaration2*/
+…
+}
+ the selector determines the HTML elements that the
+rule applies to
+ one or more declarations determine the physical
+representation of all elements that match the selector
+  slide 87
+Style Properties – Font
+font-family
+ times, helvetica, garamond, …
+ generic names: serif, sans-serif, monospace,
+…
+list alternatives, e.g.
+
+{font-family: garamond, times, serif}
+font-size
+ units: em, px, pt, in, cm, %, …
+font-style
+ normal, italic, …
+font-weight
+ 100,…, 400(normal),…, 700(bold),…, 900
+  slide 88
+Style Properties – Text
+text-decoration
+ none, underline, line-through, …
+line-height
+ same units as font-size
+text-align
+ left, center, right, justify
+  slide 89
+Further Style Properties
+color
+ black, white, orange, …
+ rgb(0,0,0), rgb(255,255,255), …
+background-color
+ colors as above or transparent
+float
+ none, left, right
+display
+ block, inline, inline-block, none,
+list-item, …
+  slide 90
+Using a Style Sheet
+ save as a style file with the extension .css
+ connect to HTML file in its page header
+<link rel="stylesheet" href="style_URL">
+ one style sheet for all the Web pages of an
+organisation
+ multiple style sheets for one Web page
+style1.css
+  slide 91
+Selectors
+ element type
+HTML_element_type
+ class
+HTML_element_type.class_name
+• with HTML attribute class="class_name"
+ (one unique) element
+#identifier
+• with HTML attribute id="identifier"
+  slide 92
+Selectors (2)
+ attribute
+[attribute="value"]
+ combinators
+• descendants space, …
+ grouping
+selector1, selector2, …
+• possibly adding/overwriting style declarations for
+single selectors
+  slide 93
+Selectors (3)
+ pseudo-classes (state)
+• :hover, :focus, :first-child, :required,
+:invalid, :checked, …
+ pseudo-elements (element part)
+• ::first-letter, ::placeholder, …
+  slide 94
+CSS Box Model
+top
+margin
+border
+padding
+I am an HTML element that
+left needs space of a certain
+right height
+height and width to be
+displayed.
+bottom
+box-sizing:
+width border-box
+95
+Style Properties – Positioning
+position
+ relative to the location without positioning: relative
+in coordinates of a positioned parent element (or else in
+
+body coordinates): absolute
+"non scrolling region", always positioned absolutely:
+
+fixed
+left, top, right, bottom page4.html
+offset from left, top, right, bottom
+
+ units: em, pt, px, in, cm, %, …
+z-index
+location of a positioned element within a stack of
+
+overlapping positioned elements
+ 1, 2, 3, …   slide 96
+Exercise "CSS"
+ Design an attractive layout for your order form as an
+external style sheet.
+ Validate your style sheet at
+https://jigsaw.w3.org/css-validator/
+ Now use this layout also for the order confirmation by
+adding the link to the external style sheet to your
+PHP script.
+  slide 97
+Choice of Styles
+ cascade (per property!)
+• inline above embedded above external style sheet
+• specificity (id above class above element type)
+• sequence within the CSS source code
+• and: nesting of HTML elements
+ media queries
+@media query { Style Sheet }
+• media types: all, screen, print
+• media features: (max-width: 400px),
+(orientation: landscape), …
+  slide 98
+Intermediate Test "CSS"
+ Write a style sheet (and an HTML page to test it) for
+the following layout
+• If a class "important" is applied to an HTML element,
+its text content is displayed in double font size.
+• Emphases in paragraphs move down 2 pixels while the
+mouse pointer hovers over them.
+• The text in text input fields is blue.
+ The Web page must validate to HTML5 without
+errors, and the style file must validate to CSS3.
+  slide 99
+JavaScript
+ object-oriented scripting language
+• ECMAScript 2015…2024: 'use strict';
+ different from Java (similar syntax)
+• prototype-based inheritance, weak typing, interpreted
+(JIT compiler)
+• "Mocha", "LiveScript" (NS), TypeScript (Microsoft)
+ browser (client)
+• interactivity of Web pages
+• user input validation before server call
+• source code in browser
+  slide 100
+JavaScript in the Browser
+ HTML <p>
+• content
+• logical structure
+ CSS p {text-align: center;}
+• presentation
+• layout
+ JavaScript p.addEventListener('click',
+• behavior JavaScript);
+• interactivity
+  slide 101
+Programming in JavaScript
+ client and server ("Full Stack")
+• MEAN stack (MongoDB, Express.js, Angular, Node.js)
+• MERN stack (MongoDB, Express.js, React, Node.js)
+ mobile apps
+• native, hybrid, Web app
+ desktop applications
+• cross-platform (Electron)
+  slide 102
+Object Orientation
+ properties (instance variables, object state)
+objectName.variableName
+document.title
+location.href
+window.innerWidth
+ methods (instance method, object behavior)
+objectName.methodName(arguments)
+document.getElementById()
+location.reload()
+window.open("URL")
+  slide 103
+Object Orientation in the Browser
+window
+DocumentObject Browser Object
+ECMAScript HTML5 APIs
+Model (DOM) Model (BOM)
+content data • console • local
+html • Object Storage,
+head Array • innerWidth, … session
+bot di ytle Function • location Storage
+p Date • href, …
+fo prm … • reload(), Web Worker
+input … Geolocation
+Battery
+controlstructure
+document API • confirm() …
+• title, images, • ; {} • open()
+• if … else, …
+cookie, … • …
+• while, for,…
+• getElementById()
+• querySelectorAll()
+• …
+  slide 104
+Exercise "Object Orientation in the Browser"
+ Draw the complete document tree of the Web page
+https://info.mi.hs-offenburg.de/~tom/
+stateForm.php
+ Open your order form in your browser. Try out in the
+Web Console:
+• the instance variables title, images, innerWidth,
+location.href
+• the functions getElementById(),
+querySelectorAll(), confirm()
+  slide 105
+JavaScript Embedded in HTML Source
+ in the head
+<script> … </script>
+• Attribute
+src="JavaScript-URL", defer
+ in the body
+...
+<script src="https://framework.com/fw.js"></script>
+<script src="my.js"></script>
+</body>
+  slide 106
+Data Types and Variables
+ dynamic, weak typing
+• primitive types ("immutable")
+number, boolean, string, …
+• object/reference types Object
+Array, Date, Function, …
+• typeof, instanceof
+ static scopes, blocks (with let)
+let variableName = value;
+let input = "ida";
+input = 10;
+input = new Date();
+  slide107
+Strings and Arrays
+ strings
+let answer = "Yes" + ' or ' + "No";
+answer.length, …
+answer.toLowerCase(), …
+ arrays
+let coord = new Array(10);
+let people = ['Chick', 'Ella', 'Count'];
+coord.length, …
+people.forEach(), …
+for (i=0; i<people.length; i++)
+console.log('Name: ' + people[i]);
+  slide108
+Operators and Control Structures
+ operators
++ - * / % ++ -- += … === !== == != <= …
+|| && …
+ sequence
+; {}
+ choice
+if … else, switch … case
+ iteration
+while, do … while, for
+  slide 109
+Functions (1)
+ defining a function
+function functionName(parameters) {
+variable definitions
+algorithm
+return functionValue;
+}
+ e.g.
+function printMe(item) {
+console.log('Name: ' + item);
+}
+  slide110
+Functions (2)
+ … are objects
+typeof printMe, printMe instanceof object
+ … can be passed as arguments to other functions
+people.forEach(printMe), coord.forEach(printMe)
+ … without a function name are called anonymous functions
+people.forEach(
+function (item) {console.log('Name: ' + item);} )
+ arrow functions are compact anonymous functions
+people.forEach(item => console.log('Name: '+item))
+  slide111
+Event-Based Programming
+ defining event listeners
+element.addEventListener('event', function);
+always:
+document.addEventListener('DOMContentLoaded',
+init);
+ passing event object ("e")
+.target, .target.value, .target.textContent, …
+.preventDefault(), …
+ events
+click, focus, blur, mouseover, mouseout, input,
+change, submit, reset, …
+events.html
+  slide 112
+Exercise "Event-Based Programming"
+ A Web page consists of two buttons, one is inscribed with
+"click me", the other has no inscription. If the "click me"
+button is clicked, the inscription disappears and the other
+button is inscribed with "click me". This always alternates.
+ Implement this behavior in HTML and JavaScript.
+ It doesn't work?
+• Validate your Web page.
+• Do you see syntax or runtime errors in the console when
+loading or executing?
+• Print test messages using console.log().
+• Set breakpoints in the debugger!
+  slide 113
+Document Object Model (DOM)
+ content
+• document tree, root is document
+• children are element nodes, attribute nodes, text nodes
+ API (instance variables, instance methods)
+• selecting
+document.getElementById('HTML id'),
+document.querySelectorAll('CSS selector'), …
+element.parentElement, .children, …
+• modifying
+element.textContent, .className, …
+• adding
+document.createElement(), element.append(), …
+• removing
+element.remove()
+  slide 114
+Architectures of Web Applications
+ Client-Side Rendering (CSR) toDoList.html
+→ Single Page Application (SPA)
+→ Progressive Web App (PWA)
+ Server-Side Rendering (SSR) toDoList.php
+ Static Site Generation (SSG)
+  slide 115
+Exercise "DOM Scripting"
+ Enhance the to-do list from the previous slide:
+1. when a new list element is created
+it will also be printed to the Web console
+2. when a list element is clicked
+it will be printed to the Web console
+3. … crossed out
+4. … deleted after OK on confirm()
+ It doesn't work?
+• see Exercise "Event-Based Programming"
+  slide 116
+Forms
+ defining event listeners in init() function
+• input validation whilefilling in the form
+inputElement.addEventListener('event', checkElement);
+• input validation aftercompleting the form
+form.addEventListener('submit', checkForm);
+ input elements
+• selecting
+e.target, form.nameOfInputElement, …
+• reading
+value, checked, …
+ prevent form data from being sent to the server
+e.preventDefault()
+formData.html pizzaJS.html
+  slide 117
+Exercise "JavaScript and Forms"
+ Enhance your order form with input validation while
+filling in and after completing the form.
+Check at least one text input field, a check box and a
+radio button group. Put your JavaScript functions in a
+separate file.
+ It doesn't work?
+• see Exercise "Event-Based Programming"
+  slide 118
+Input Validation for Forms
+ while filling in (client – JavaScript, HTML)
+• e.g. ZIP code is a five digit number
+• inputElement.addEventListener()
+• events change, blur, click, …
+ after completing, but before sending (client – JavaScript, HTML)
+• e.g. the password has been given, at least one checkbox has been
+checked
+• form.addEventListener('submit',…)
+ after sending (server - PHP)
+• e.g. password is correct
+• all client-side validations again, and more checks (e.g. XSS)
+pizza4u.html
+  slide 119
+Exercise "JavaScript and XSS"
+ Check if your PHP implementation for the Exercise
+"PHP" is vulnerable to cross-site scripting.
+ Fix the problem with this PHP function
+https://php.net/htmlspecialchars, e.g.:
+$name=htmlspecialchars($_POST['theName']);
+  slide 120
+Intermediate Test "JavaScript"
+ Implement the following behavior of a Web page in
+HTML, CSS, and JavaScript:
+Paragraphs become invisible when clicked.
+There is a button that makes all paragraphs visible
+again.
+ The Web page must validate according to HTML5
+without errors.
+  slide 121
+Extensible Markup Language (XML)
+ structuring, automatic processing, communicating,
+storing of data/documents
+ meta language to define new document types /
+description languages
+• application-specific tags, semantics
+• "intelligent" processing of documents
+• platform-independent, standardized
+• text-based
+ Java: portable code, XML: portable data!
+caminetto.html
+  slide 122
+Basic Terms
+attribut attribut
+name value
+markup <meal vegetarian="true"> start tag
+character data Pizza Margherita content
+markup </meal> end tag
+a (meal) element
+  slide 123
+Document Tree (Tree Structure)
+parent element
+restaurant
+root element
+type: italian "content"
+child element
+name address menu
+Il Caminetto street city meal meal meal
+zip.: 76133 veg.: true
+Kronenstr. 5 Karlsruhe Pizza Pizza Pizza
+Margherita Zingara Scampetti
+created from text file (caminetto1.xml) by XML parser
+  slide 124
+XML Documents
+ XML declaration
+<?xml version="1.0" encoding="character
+code" ?>
+ well-formed
+• always start tag with corresponding end tag
+• correct nesting of elements
+• one root element
+• attribute values in (double or single) quotation marks
+• (…)
+  slide 125
+Rendering of XML Documents
+ CSS
+• in the Web
+<?xml-stylesheet href="Stil-URL"
+type="text/css" ?> restaurant.css
+ XSL (Extensible Stylesheet Language)
+• XSL-FO (XSL Formatting Objects) for
+high-quality printing
+• XSLT (XSL Transformations) for document
+transformation, e.g. from any XML application to HTML
+  slide 126
+XML Applications
+ application to a certain task
+ is a specific markup language
+ defining the language by a schema
+• schema languages: DTD, XML Schema, RELAX NG, …
+ a document using a language as defined by its
+corresponding schema is valid
+  slide 127
+Exercise "XML Documents"
+ Write down a structured data set (e.g. a concrete
+order, information about a movie, etc.) as an XML
+document.
+Check this order for well-formedness in Firefox and
+display its tree structure.
+Develop a CSS style and display the formatted XML
+document.
+  slide 128
+Dokument Type Definitions (DTDs)
+ a DTD is a grammar defining the syntax of a specific
+markup language:
+• elements provided
+• supported structure of each element (nesting, content)
+• supported attributes of each element
+ a document refers to the DTD of its language by a
+document type declaration
+<!DOCTYPE root_element SYSTEM "DTD-URL">
+  slide 129
+Element Declaration
+<!ELEMENT element_name (content_model)>
+ content model
+1. text (#PCDATA)
+2. child elements using operators
+, sequence
+| choice – alternative
+? choice – option
+* iteration 0-n
++ iteration 1-n
+() grouping
+  slide 130
+Element Declaration (2)
+3. mixed content
+(#PCDATA | …)*
+4. empty elements
+EMPTY
+  slide 131
+Attribute Declaration
+<!ATTLIST element_name
+attribute_name type default_value
+…
+>
+ types
+• CDATA
+• NMTOKEN
+• (value1 | value2 | …)
+• …
+  slide 132
+Attribute Declaration (2)
+ default values
+• #IMPLIED
+• #REQUIRED
+• "value"

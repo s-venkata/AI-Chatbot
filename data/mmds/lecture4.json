@@ -1,0 +1,144 @@
+{
+    "topics": [
+      "Audio Meta Data",
+      "Semantics",
+      "Audio Retrieval",
+      "Examples"
+    ],
+    "key_concepts": [
+      {
+        "title": "Audio Retrieval System",
+        "components": [
+          "Query by text, audio example, or description",
+          "User interface: browse, play, visualize",
+          "Meta data extraction",
+          "Audio segmentation",
+          "Audio database"
+        ]
+      },
+      {
+        "title": "Audio Meta Data",
+        "categories": [
+          {
+            "type": "Technical/Syntactic",
+            "examples": [
+              "File type",
+              "Sampling frequency",
+              "Amplitude",
+              "Duration",
+              "Bandwidth"
+            ]
+          },
+          {
+            "type": "Semantic",
+            "examples": [
+              "Singer",
+              "Speaker",
+              "Title",
+              "Topic",
+              "Location"
+            ]
+          }
+        ],
+        "time_domain_attributes": [
+          "Average energy (indicates loudness)",
+          "Zero crossing rate (frequency of amplitude sign changes)",
+          "Silence ratio (proportion of silent sections)"
+        ],
+        "frequency_domain_attributes": [
+          "Bandwidth",
+          "Energy distribution across frequency components",
+          "Harmonicity (relation of dominant frequencies to the fundamental frequency)"
+        ]
+      },
+      {
+        "title": "Segmentation",
+        "description": "Splitting audio signals into homogeneous windows.",
+        "approaches": [
+          "Fixed window size specified by the developer.",
+          "Using homogeneity predicates to compute segments."
+        ]
+      },
+      {
+        "title": "Audio Categories",
+        "examples": [
+          {
+            "type": "Sound",
+            "meta_data": ["Source", "Length", "Amplitude"],
+            "tools": ["Findsounds", "Audioset"]
+          },
+          {
+            "type": "Music",
+            "meta_data": ["Genre", "Singer", "Song text"],
+            "tools": ["Spotify", "Shazam", "Apple Music"]
+          },
+          {
+            "type": "Speech",
+            "meta_data": ["Content", "Abstract", "Speaker"],
+            "tools": ["Siri", "Alexa", "Deep Learning"]
+          }
+        ]
+      },
+      {
+        "title": "Semantic Audio Queries",
+        "examples": [
+          "What is the sound of a zebra?",
+          "Who is this speaker?",
+          "Find a speech by Barack Obama about refugees.",
+          "Identify the title and artist of a song."
+        ],
+        "key": "Based on meta data."
+      },
+      {
+        "title": "Recommendations and Speech Recognition",
+        "recommendation_types": [
+          "Based on genres",
+          "Content-based",
+          "Collaborative (e.g., friends)",
+          "Combination of content-based and collaborative"
+        ],
+        "speech_recognition": "Voice-to-text apps using Deep Learning, followed by NLP."
+      },
+      {
+        "title": "Exact and Keyword Search",
+        "methods": [
+          "SQL for technical attributes or keywords.",
+          "GUI translating user selections into SQL queries."
+        ],
+        "example_query": "Find sounds with 'tiger' as a keyword and silence ratio < 0.1."
+      },
+      {
+        "title": "Deep Learning for Audio Retrieval",
+        "applications": [
+          "Audio event recognition",
+          "Feature extraction (e.g., zero crossing rate, spectral features)",
+          "Classification using neural networks (e.g., convolutional and recurrent NNs)"
+        ]
+      },
+      {
+        "title": "Shazam and Audio Fingerprinting",
+        "fingerprinting": "A small data set identifies an audio object using time-frequency peaks.",
+        "data_structure": [
+          "Anchor points reference other peaks.",
+          "Pairs of time-frequency points form combinatorial hashes (e.g., [freq1:freq2:∆t]:t1)."
+        ],
+        "algorithm": "Match hashes of a query with stored hashes to identify songs."
+      },
+      {
+        "title": "Freesound",
+        "questions": [
+          "What meta data exists?",
+          "How is it generated?",
+          "How does similarity search work, and how effective is it?"
+        ]
+      }
+    ],
+    "conclusion": {
+      "points": [
+        "DBMS can store audio data but lack content-based retrieval capabilities.",
+        "Meta data creation often requires external tools or Deep Learning.",
+        "Commercial systems for content-based audio retrieval are still not widespread."
+      ]
+    }
+  }
+  

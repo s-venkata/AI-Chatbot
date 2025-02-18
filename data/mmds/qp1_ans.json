@@ -1,0 +1,170 @@
+{
+  "problem_1": {
+    "a": {
+      "meta_data": {
+        "P1": [100, 100, 59],
+        "P2": [200, 200, 120],
+        "Q": [220, 240, 20]
+      },
+      "distance_calculation": {
+        "distance_P1": "sqrt((220 - 100)^2 + (240 - 100)^2 + (20 - 59)^2)",
+        "distance_P2": "sqrt((220 - 200)^2 + (240 - 200)^2 + (20 - 120)^2)"
+      },
+      "comparison": "P2 is more similar to Q because it has a shorter Euclidean distance to Q compared to P1."
+    },
+    "b": {
+      "additional_meta_data": {
+        "attribute_1": {
+          "name": "Location",
+          "P1_value": "Oslo, Norway",
+          "P2_value": "Bordeaux, France"
+        },
+        "attribute_2": {
+          "name": "Category",
+          "P1_value": "Modern architecture",
+          "P2_value": "Gothic architecture"
+        }
+      }
+    },
+    "c": {
+      "semantic_gap_definition": "The semantic gap refers to the difference between low-level metadata (numerical values like color histograms) and high-level human interpretation of images (e.g., recognizing a city or architectural style). For P1 and P2, the metadata values may not fully capture their architectural differences, which a human can easily distinguish."
+    }
+  },
+  "problem_2": {
+    "a": {
+      "previous_weight": 0.3,
+      "input_value": 1,
+      "desired_output": 1,
+      "actual_output": 0,
+      "learning_rate": 0.3,
+      "delta_rule": "Delta w = learning_rate * (desired_output - actual_output) * input_value",
+      "calculation": "Delta w = 0.3 * (1 - 0) * 1 = 0.3",
+      "new_weight": 0.6
+    },
+    "b": {
+      "definition": {
+        "neuron_level": "Backpropagation is the process of adjusting the weights of a neuron based on the error between the desired and actual output using the delta rule.",
+        "convolutional_network": "In a convolutional network, backpropagation is used to propagate the error backward from the output layer through the convolutional layers, adjusting the filters and biases to minimize the loss function."
+      }
+    },
+    "c": {
+      "input_image": [
+        [2, 1, 0],
+        [0, 3, 1],
+        [0, 0, 2],
+        [0, 0, 1]
+      ],
+      "filter": [
+        [0, 1, 0],
+        [0, 2, 1],
+        [1, 0, 1]
+      ],
+      "bias": [
+        [0, 0],
+        [0, 1]
+      ],
+      "activation_map": [
+        [10, 4],
+        [6, 7]
+      ]
+    },
+    "d": {
+      "explanation": "The three sheets/levels represent the three color channels (Red, Green, Blue) of the input image. In convolutional networks, each channel is processed separately, and filters take into account all three channels to extract meaningful features."
+    }
+  },
+  "problem_3": {
+    "a": {
+      "relations": [
+        {
+          "table_name": "video",
+          "attributes": ["vId (Primary Key)", "vidSource", "name", "year"]
+        },
+        {
+          "table_name": "scene",
+          "attributes": ["sId (Primary Key)", "vId (Foreign Key)", "from", "to"],
+          "foreign_key_explanation": "vId in the scene table references the vId in the video table."
+        },
+        {
+          "table_name": "object",
+          "attributes": ["oId (Primary Key)", "oName"]
+        },
+        {
+          "table_name": "appearsIn",
+          "attributes": ["sId (Foreign Key)", "oId (Foreign Key)"],
+          "foreign_key_explanation": [
+            "sId in appearsIn references the sId in the scene table.",
+            "oId in appearsIn references the oId in the object table."
+          ]
+        }
+      ]
+    },
+    "b": {
+      "tuples": [
+        {
+          "video": {
+            "vId": 1,
+            "vidSource": "WildLifeSource",
+            "name": "Wild Life",
+            "year": 2023
+          },
+          "scene": [
+            {
+              "sId": 12,
+              "vId": 1,
+              "from": "00:10:00",
+              "to": "00:12:00"
+            },
+            {
+              "sId": 25,
+              "vId": 1,
+              "from": "00:45:00",
+              "to": "00:47:00"
+            }
+          ],
+          "object": {
+            "oId": 1,
+            "oName": "Tiger"
+          },
+          "appearsIn": [
+            {
+              "sId": 12,
+              "oId": 1
+            },
+            {
+              "sId": 25,
+              "oId": 1
+            }
+          ]
+        }
+      ]
+    },
+    "c": {
+      "sql_query": "SELECT scene.sId, scene.from, scene.to, video.name FROM scene INNER JOIN appearsIn ON scene.sId = appearsIn.sId INNER JOIN object ON appearsIn.oId = object.oId INNER JOIN video ON scene.vId = video.vId WHERE object.oName = 'Tiger';"
+    }
+  },
+  "problem_4": {
+    "a": {
+      "answer": "The YOLO algorithm can be used to create metadata by detecting and labeling objects in Netflix videos in real time. Examples of metadata include objects such as 'Person', 'Car', 'Animal', and 'Furniture' along with their bounding boxes, timestamps, and appearances in specific frames or scenes."
+    },
+    "examples": [
+      {
+        "object": "Person",
+        "timestamp": "00:02:10",
+        "bounding_box": "(x1: 100, y1: 200, x2: 300, y2: 400)"
+      },
+      {
+        "object": "Car",
+        "timestamp": "00:05:30",
+        "bounding_box": "(x1: 50, y1: 150, x2: 400, y2: 600)"
+      },
+      {
+        "object": "Dog",
+        "timestamp": "00:12:45",
+        "bounding_box": "(x1: 120, y1: 220, x2: 300, y2: 350)"
+      }
+    ],
+    "b": {
+      "answer": "Results of the YOLO algorithm can be organized in a Frame Segment tree by indexing detected objects based on the frame number and time segment in which they appear. Each node of the tree represents a time segment, and child nodes represent frames within that segment. Objects detected in each frame are stored as attributes in the corresponding frame node, allowing efficient searching by object type, timestamp, or scene segment."
+    }
+  }
+}

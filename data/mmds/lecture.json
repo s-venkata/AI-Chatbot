@@ -1,0 +1,176 @@
+{
+    "Multimedia_Databases": {
+      "Content_and_General_Structure": [
+        {
+          "Introduction": [
+            "meta data",
+            "terms",
+            "similarity",
+            "retrieval",
+            "DBS types"
+          ]
+        },
+        {
+          "Technological_Foundations": [
+            "information retrieval",
+            "AI",
+            "ML",
+            "neural networks",
+            "MMDBS architecture"
+          ]
+        },
+        {
+          "Image_Databases": [
+            "meta data",
+            "features",
+            "semantics",
+            "deep learning",
+            "retrieval",
+            "case study"
+          ]
+        },
+        {
+          "Audio_Databases": [
+            "meta data",
+            "semantics",
+            "audio retrieval",
+            "examples"
+          ]
+        },
+        {
+          "Video_Databases": [
+            "meta data",
+            "segments",
+            "abstracts",
+            "semantics",
+            "retrieval",
+            "data structure",
+            "examples"
+          ]
+        },
+        {
+          "Text_Databases": [
+            "meta data",
+            "NLP",
+            "LLM",
+            "CLIP"
+          ]
+        },
+        {
+          "All_Together": [
+            "query types",
+            "data model"
+          ]
+        }
+      ],
+      "Objective_of_the_Lecture": {
+        "Understand": [
+          "what multimedia database systems (MMDBS) are",
+          "concepts of MMDBS and application"
+        ],
+        "Be_Able_To": [
+          "specify, create, and implement multimedia databases",
+          "store and query multimedia data",
+          "analyze and evaluate existing MMDBS",
+          "reflect on the benefits and disadvantages of MMDBS"
+        ],
+        "Difference_Between_Studies": "Bachelor and Master studies"
+      },
+      "Prerequisites": [
+        "UML and Entity-Relationship-model",
+        "basic principles of databases",
+        "relational model and SQL"
+      ],
+      "Advance_Organizer_MMDBS": {
+        "Components": [
+          "User interface",
+          "Applications",
+          "Prototypes"
+        ],
+        "Data": {
+          "Types": ["Image", "Audio", "Video", "Text"],
+          "Operations": ["store and search", "extract and create metadata"]
+        }
+      },
+      "Introduction": {
+        "Terms_and_Applications": [
+          "Multimedia Data",
+          "Meta Data",
+          "Similarity",
+          "Retrieval",
+          "Types of DBS"
+        ],
+        "Components": [
+          "video",
+          "images",
+          "text",
+          "audio"
+        ],
+        "Important_Terms": {
+          "Multimedia_Database": "Database with multimedia data",
+          "Multimedia_Database_Management_System": "DBMS + support for multimedia data types",
+          "CBR": "content-based retrieval",
+          "AI": "artificial intelligence for semantic metadata extraction"
+        },
+        "Example_Applications": [
+          "Health industry",
+          "Internet companies and social media",
+          "E-learning",
+          "Movie and music industry",
+          "Travel industry",
+          "Fashion",
+          "Autonomous driving"
+        ]
+      },
+      "Meta_Data": {
+        "Attributes": [
+          "features",
+          "segments",
+          "keywords",
+          "free text",
+          "data type",
+          "resolution",
+          "index"
+        ],
+        "Extraction": {
+          "Manual": "User adds semantic data like keywords, bookmarks, tags",
+          "Machine_Based": "Extract intrinsic attribute values using AI"
+        }
+      },
+      "Retrieval_of_MMData": {
+        "Users_Search_For": [
+          "Image with ID",
+          "Image with certain meaning, content, color, object"
+        ],
+        "Search_Must_Be_Based_On": ["meta data", "query by example"],
+        "Similarity": "User's opinion/goal is important"
+      },
+      "Retrieval_Quality": {
+        "Precision": "Correct answers divided by total documents returned",
+        "Recall": "Correct answers divided by total correct documents"
+      },
+      "Types_of_Databases": {
+        "Relational": {
+          "Description": "Tables and SQL, media stored as BLOB",
+          "Features": ["connected by foreign keys"]
+        },
+        "Object_Relational": "Special types for multimedia",
+        "NoSQL": {
+          "Description": "For very large, unstructured data",
+          "Features": [
+            "Document-oriented databases",
+            "Flexible and fast"
+          ]
+        }
+      },
+      "Document_Databases": {
+        "Description": "Data is stored in form of documents",
+        "Features": [
+          "No schema",
+          "Variable attributes",
+          "Supports complex multimedia objects"
+        ]
+      }
+    }
+  }
+  

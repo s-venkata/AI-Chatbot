@@ -1,0 +1,126 @@
+{
+  "problem_1": {
+    "a": {
+      "question": "Given meta data for pictures P1(100, 100, 59) and P2(200, 200, 120) and query picture Q(220, 240, 20), determine which of P1 and P2 is more similar and explain why.",
+      "answer": "P2 is more similar to Q because the Euclidean distance between P2 and Q is smaller than the distance between P1 and Q. This calculation considers the color or texture similarity."
+    },
+    "b": {
+      "question": "Mention two additional meta data attributes and their values for P1 and P2.",
+      "tags": {
+        "P1": ["Modern architecture", "Waterfront"],
+        "P2": ["Gothic architecture", "Hill landscape"]
+      }
+    },
+    "c": {
+      "question": "Explain the term semantic gap for P1 and P2.",
+      "answer": "The semantic gap refers to the difference between low-level metadata, such as numerical values of color or texture, and high-level human interpretation, such as recognizing specific architectural styles or landscapes. While metadata can indicate differences, it cannot fully explain why P1 represents modern architecture and P2 represents Gothic architecture."
+    }
+  },
+  "problem_2": {
+    "a": {
+      "question": "Calculate the new weight w1 of an input using the delta rule (previous value 0.3, input value 1, desired output 1, actual output 0, learning rate 0.3).",
+      "calculation": "Delta w = 0.3 * (1 - 0) * 1 = 0.3. New weight = 0.3 + 0.3 = 0.6.",
+      "new_weight": 0.6
+    },
+    "b": {
+      "question": "Explain the term backpropagation for the neuron in part a) and for a convolutional network in general.",
+      "answer": "Backpropagation adjusts the weights of neurons to minimize the error between desired and actual outputs. In a convolutional network, it propagates error back through convolutional and fully connected layers, adjusting filters and biases to improve performance."
+    },
+    "c": {
+      "question": "Write down the activation map for a given input to a convolutional layer and a corresponding filter (no padding).",
+      "activation_map": [
+        [9, 8],
+        [7, 8]
+      ]
+    },
+    "d": {
+      "question": "Explain the part of the network on the left side in the oval. Why are there 3 sheets or levels?",
+      "answer": "The three sheets or levels represent the RGB color channels of the input image. Each channel processes information separately but is combined in filters to extract meaningful features."
+    }
+  },
+  "problem_3": {
+    "a": {
+      "question": "Define relations representing the given ER schema for a video database in the form tablename(attr1, attr2, ...). Mark primary and foreign keys.",
+      "relations": [
+        {
+          "table_name": "video",
+          "attributes": ["vId (Primary Key)", "vidSource", "name", "year"]
+        },
+        {
+          "table_name": "scene",
+          "attributes": ["sId (Primary Key)", "vId (Foreign Key)", "from", "to"]
+        },
+        {
+          "table_name": "object",
+          "attributes": ["oId (Primary Key)", "oName"]
+        },
+        {
+          "table_name": "appearsIn",
+          "attributes": ["sId (Foreign Key)", "oId (Foreign Key)"]
+        }
+      ]
+    },
+    "b": {
+      "question": "Write down tuples for all relations representing the object 'tiger' in scenes 12 and 25 of the video 'Wild Life'.",
+      "tuples": {
+        "video": {
+          "vId": 1,
+          "vidSource": "WildLifeSource",
+          "name": "Wild Life",
+          "year": 2023
+        },
+        "scene": [
+          {
+            "sId": 12,
+            "from": "00:10:00",
+            "to": "00:12:00"
+          },
+          {
+            "sId": 25,
+            "from": "00:45:00",
+            "to": "00:47:00"
+          }
+        ],
+        "object": {
+          "oId": 1,
+          "oName": "Tiger"
+        },
+        "appearsIn": [
+          {
+            "sId": 12,
+            "oId": 1
+          },
+          {
+            "sId": 25,
+            "oId": 1
+          }
+        ]
+      }
+    },
+    "c": {
+      "question": "Write an SQL query to find scenes (including the time schedule) and the corresponding video name in which a tiger appears.",
+      "sql_query": "SELECT scene.sId, scene.from, scene.to, video.name FROM scene INNER JOIN appearsIn ON scene.sId = appearsIn.sId INNER JOIN object ON appearsIn.oId = object.oId INNER JOIN video ON scene.vId = video.vId WHERE object.oName = 'Tiger';"
+    }
+  },
+  "problem_4": {
+    "a": {
+      "question": "List examples of video meta data that could be created in a Netflix video database using YOLO (You Only Look Once).",
+      "examples": [
+        {
+          "object": "Person",
+          "timestamp": "00:02:10",
+          "bounding_box": "(x1: 100, y1: 200, x2: 300, y2: 400)"
+        },
+        {
+          "object": "Car",
+          "timestamp": "00:05:30",
+          "bounding_box": "(x1: 50, y1: 150, x2: 400, y2: 600)"
+        }
+      ]
+    },
+    "b": {
+      "question": "Explain how results of the YOLO algorithm for a Netflix video can be represented and searched for in a Frame Segment tree.",
+      "answer": "YOLO results can be organized in a Frame Segment tree, where each node represents a time segment and contains objects detected within that segment. Efficient searches can be performed using object type, timestamp, or scene segment."
+    }
+  }
+}

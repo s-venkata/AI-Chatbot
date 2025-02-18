@@ -1,0 +1,25 @@
+{
+    "assignments": [
+      {
+        "assignment_number": 1,
+        "deadline": "2025-01-15"
+      },
+      {
+        "assignment_number": 2,
+        "deadline": "2025-01-20"
+      },
+      {
+        "assignment_number": 3,
+        "deadline": "2025-01-24"
+      },
+      {
+        "assignment_number": 4,
+        "deadline": "2025-01-25"
+      },
+      {
+        "assignment_number": 5,
+        "deadline": "2025-01-30"
+      }
+    ]
+  }
+  

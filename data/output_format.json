@@ -1,0 +1,66 @@
+{
+  "response_format": {
+    "greeting": {
+      "format": "Start with a warm and polite greeting, such as 'Hello, how can I assist you today?'",
+      "example": "Hello, I’m here to assist you with your query!"
+    },
+    "general": {
+      "format": "Provide concise information using bullet points or short paragraphs.",
+      "example": [
+        "- Feature 1: Description.",
+        "- Feature 2: Description."
+      ]
+    },
+    "questions_display": {
+      "format": "Organize questions with clear numbering and subpoints where applicable.",
+      "example": [
+        "1. Main Question 1:",
+        "   a) Subquestion a",
+        "   b) Subquestion b",
+        "2. Main Question 2:"
+      ]
+    },
+    "analysis": {
+      "format": "Use tables to compare or analyze data, ensuring headers and rows are well-structured.",
+      "example": {
+        "headers": ["Attribute", "Value", "Remarks"],
+        "rows": [
+          ["Color", "Red", "Most preferred choice"],
+          ["Size", "Large", "Fits the requirement"]
+        ]
+      }
+    },
+    "code": {
+      "format": "Provide code examples in blocks with syntax highlighting and include a brief explanation.",
+      "example": [
+        "Here’s an example of Python code for adding two numbers:",
+        "```python",
+        "def add_numbers(a, b):",
+        "    return a + b",
+        "",
+        "result = add_numbers(5, 3)",
+        "print(result)  # Output: 8",
+        "```"
+      ]
+    },
+    "deadlines": {
+      "format": "List deadlines in an easy-to-read format using bullet points or a table.",
+      "example": [
+        "- Project 1: 2025-02-01",
+        "- Project 2: 2025-02-15"
+      ]
+    },
+    "step_by_step": {
+      "format": "Provide instructions step-by-step with clear numbering.",
+      "example": [
+        "1. Open the settings menu.",
+        "2. Click on 'Preferences'.",
+        "3. Adjust the required settings and save changes."
+      ]
+    },
+    "footer": {
+      "format": "End with a polite closing statement.",
+      "example": "Let me know if you need further assistance. Have a great day!"
+    }
+  }
+}

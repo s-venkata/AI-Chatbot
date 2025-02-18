@@ -1,0 +1,80 @@
+{
+  "institution": "Fachhochschule Offenburg",
+  "exam": {
+    "name": "Multimedia Databases",
+    "semester": "WiSe 2023/24",
+    "professor": "Prof. Dr. V. Sänger",
+    "date": "30.1.2024",
+    "time": "45 minutes",
+    "total_points": 45,
+    "instructions": {
+      "materials_allowed": "Dictionary",
+      "materials_not_allowed": "No further materials",
+      "response_format": "Use only the squared paper that was handed out",
+      "explanation_format": "Short but comprehensive"
+    },
+    "problems": [
+      {
+        "problem_number": 1,
+        "points": [3, 2, 5],
+        "subproblems": [
+          {
+            "description": "Describe how the segmentation in picture P1 could look like."
+          },
+          {
+            "description": "Define two tags for each of the two pictures P1 and P2 that help to distinguish between them."
+          },
+          {
+            "description": "Compare the result of a similarity query for P1 based on meta data like color or texture with the result of sending P1 through a Deep Neural Network."
+          }
+        ]
+      },
+      {
+        "problem_number": 2,
+        "points": [4, 4, 4],
+        "subproblems": [
+          {
+            "description": "Calculate the new weight w1 of an input using the delta rule. Previous value: 0.3, input value: 1, desired output: 1, actual output: 0, learning rate: 0.3."
+          },
+          {
+            "description": "Write down the activation map for a given input to a convolutional layer and a corresponding filter (no padding)."
+          },
+          {
+            "description": "Explain the goal or task of convolutional layers in a convolutional neural network."
+          }
+        ]
+      },
+      {
+        "problem_number": 3,
+        "points": [5, 3, 4],
+        "subproblems": [
+          {
+            "description": "Define relations representing the given ER schema for an image database in the form tablename(attr1, attr2, …). Mark primary and foreign keys."
+          },
+          {
+            "description": "Write down tuples of all your relations starting with a certain picture. Assign two tags and a creator."
+          },
+          {
+            "description": "Write an SQL query to find all tags assigned to a picture titled 'HSO building D'."
+          }
+        ]
+      },
+      {
+        "problem_number": 4,
+        "points": [4, 3, 4],
+        "subproblems": [
+          {
+            "description": "Which kind of video meta data could be created in the Netflix video database with the help of YOLO?"
+          },
+          {
+            "description": "Explain results of the YOLO algorithm shown for the picture with two cats. Evaluate its performance."
+          },
+          {
+            "description": "Explain why MongoDB is better than a relational database for storing YOLO and vgg19 meta data."
+          }
+        ]
+      }
+    ]
+  },
+  "closing": "Viel Erfolg!"
+}

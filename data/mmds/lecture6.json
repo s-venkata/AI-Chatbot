@@ -1,0 +1,103 @@
+{
+    "topics": [
+      "Introduction",
+      "Knowledge in Text",
+      "Natural Language Processing (NLP)",
+      "TF-IDF",
+      "Text Databases and LLMs"
+    ],
+    "key_concepts": [
+      {
+        "title": "Text Databases",
+        "components": [
+          "Management of unstructured or semi-structured text data",
+          "Creation of meta data",
+          "Query interfaces for exact matches, similarity searches, and classification",
+          "Examples: PDFs, Word, and HTML documents in a company database"
+        ]
+      },
+      {
+        "title": "Natural Language Processing (NLP)",
+        "description": "Concerned with enabling computers to understand text and spoken words.",
+        "components": [
+          "Text recognition",
+          "Information retrieval and extraction",
+          "Text classification and summarization",
+          "Machine translation",
+          "Speech recognition"
+        ],
+        "process": [
+          "Tokenization: Convert text into tokens.",
+          "Stopword Removal: Remove non-discriminative words (e.g., 'a', 'in').",
+          "Normalization: Standardize words (e.g., USA → usa).",
+          "Stemming/Lemmatization: Reduce words to their root forms.",
+          "Sentence Segmentation: Identify sentence boundaries."
+        ]
+      },
+      {
+        "title": "TF-IDF",
+        "definition": {
+          "TF": "Relative significance of a word in a document (Frequency of word/Total words in document).",
+          "IDF": "Importance of a word in the entire corpus (log(Total documents/Documents containing the word)).",
+          "TF-IDF": "Product of TF and IDF, used to weigh terms for text retrieval."
+        },
+        "example": [
+          "Document Corpus: ['The car drives on the road', 'The truck drives on the highway', 'The test']",
+          "TF-IDF scores calculated for terms like 'car', 'drives', and 'road'."
+        ]
+      },
+      {
+        "title": "Principle of Text Search",
+        "method": [
+          "Represent documents and queries as word vectors.",
+          "Match vectors using cosine similarity.",
+          "Rank results by cosine value (higher value = better match)."
+        ]
+      },
+      {
+        "title": "Large Language Models (LLMs)",
+        "description": "LLMs like ChatGPT provide new possibilities for text databases.",
+        "applications": [
+          "Generating abstracts",
+          "Translating text",
+          "Classifying and clustering documents",
+          "Creating meta data for retrieval"
+        ]
+      },
+      {
+        "title": "Text Databases with LLMs",
+        "features": [
+          "LLMs create meta data (e.g., keywords, abstracts, categories).",
+          "Similarity search capabilities with LLMs as a database extension."
+        ]
+      },
+      {
+        "title": "CLIP",
+        "description": "A neural network connecting text and images for classification.",
+        "features": [
+          "Search by free text or image.",
+          "Trained on internet images with assigned text.",
+          "Not optimized for specific classes but highly versatile."
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "title": "CLIP",
+        "training": "Trained on internet images with related text.",
+        "applications": [
+          "Retrieve content information using visual and textual queries.",
+          "Apply to any visual classification benchmark with text labels."
+        ]
+      }
+    ],
+    "conclusion": {
+      "points": [
+        "Text databases differ significantly from structured relational databases.",
+        "Automatic text processing is required to extract semantic information.",
+        "Text databases enhance knowledge management for organizations.",
+        "Features of text databases, like translation, benefit audio databases."
+      ]
+    }
+  }
+  

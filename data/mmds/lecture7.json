@@ -1,0 +1,71 @@
+{
+    "topics": [
+      "Introduction",
+      "Query Types",
+      "Data Model"
+    ],
+    "key_concepts": [
+      {
+        "title": "Multimedia Retrieval System",
+        "components": [
+          "User interface: text similarity, browsing, playing, visualization, query description",
+          "Query manager for segmentation and meta data creation",
+          "Integrated databases: VideoDB, AudioDB, ImageDB, TextDB",
+          "Meta data: automatic extraction, manual annotation, joined meta data"
+        ]
+      },
+      {
+        "title": "Query Types",
+        "methods": [
+          "Exact Query",
+          "Keyword Search",
+          "Category Browsing",
+          "Query by Example",
+          "Query by Sketch",
+          "Query by Icon",
+          "Query by Humming",
+          "Query by Object"
+        ]
+      },
+      {
+        "title": "MMObjects",
+        "description": "Multimedia data stored in a MongoDB (document-oriented database).",
+        "features": [
+          "Flexible structure allowing objects of different sizes",
+          "Meta data created externally"
+        ],
+        "example_structure": {
+          "name": "Peter",
+          "age": 25,
+          "pictures": [
+            {"file": "peter1.jpg", "features": "peter1Features"},
+            {"file": "peter2.jpg", "features": "peter2Features"}
+          ],
+          "speech": [
+            {"file": "petersWords.mp3", "features": "pWFeatures"}
+          ],
+          "videos": [
+            {"file": "peterV1.mp4", "features": "pV1Features"},
+            {"file": "peterV2.mp4", "features": "pV2Features"}
+          ]
+        }
+      },
+      {
+        "title": "Exercise: Relational MMDBS",
+        "requirements": [
+          "Store information about landmarks (e.g., Victoria Falls, Golden Gate Bridge).",
+          "Categories for landmarks, each with one super category (e.g., man-made, nature).",
+          "Pictures and videos assigned to each landmark.",
+          "Users can add keywords and free text for landmarks."
+        ]
+      }
+    ],
+    "final_conclusion": {
+      "points": [
+        "Combinations of different media types in one database are possible.",
+        "Deep Learning is the foundation for content-based retrieval.",
+        "Developers of MMDBS need knowledge in data modeling, database systems, implementation, user interfaces, and multimedia meta data (creation, representation, meaning, comparison)."
+      ]
+    }
+  }
+  

@@ -1,0 +1,142 @@
+{
+    "topics": [
+      "Intro",
+      "Meta Data for Images",
+      "Semantics",
+      "Deep Learning",
+      "Image Retrieval",
+      "Case Study"
+    ],
+    "key_concepts": [
+      {
+        "title": "Image Retrieval System",
+        "components": [
+          "Query by text or visual example",
+          "Meta data extraction",
+          "Query manager",
+          "Image database",
+          "Visualization of results"
+        ]
+      },
+      {
+        "title": "Meta Data for Images",
+        "description": "Attributes derived from images to describe their content (e.g., average RGB value).",
+        "types": [
+          "Technical/Syntactic (e.g., file type, size, color distribution)",
+          "Semantic (e.g., object, person, location)"
+        ],
+        "goal": "Enable users to search using meta data."
+      },
+      {
+        "title": "Segmentation",
+        "description": "Breaking an image into groups of related pixels (segments).",
+        "steps": [
+          "Map neighboring, similar pixels to equal values.",
+          "Group pixels into larger segments.",
+          "Represent the image with mapped pixel values."
+        ],
+        "goal": "Simplify presentation and recognize regions."
+      },
+      {
+        "title": "Color Attributes",
+        "representations": ["RGB", "HSB", "L*a*b*"],
+        "statistics": ["Mean", "Variance", "Skewness"],
+        "example": "Histogram-based analysis."
+      },
+      {
+        "title": "Texture",
+        "description": "Spatial arrangements of colors or gray levels.",
+        "approach": "Compute co-occurrence matrices and derive texture values for areas of the image."
+      },
+      {
+        "title": "Shape",
+        "description": "Captures prominent elements of objects or regions.",
+        "representation": [
+          "Overlay a grid and store characteristic points.",
+          "Build feature vectors from these points."
+        ],
+        "geometric_attributes": [
+          "Minimum/Maximum rectangle",
+          "Radius vectors"
+        ]
+      },
+      {
+        "title": "Semantic Gap",
+        "definition": "The disconnect between extracted sensory data and human interpretation.",
+        "solution": [
+          "Combine textual information and visual features.",
+          "Use machine learning to identify semantic classes."
+        ]
+      },
+      {
+        "title": "Deep Learning",
+        "applications": [
+          "Image Recognition and Classification",
+          "Object Detection",
+          "Face Recognition"
+        ],
+        "principles": [
+          "Stepwise transformation from raw input data to distinguishable features.",
+          "Output: Class probabilities."
+        ]
+      },
+      {
+        "title": "Convolutional Neural Networks (CNNs)",
+        "components": [
+          "Convolutional Layer: Extract high-level features.",
+          "Pooling Layer: Reduce activation map size and computation.",
+          "Fully Connected Layer: Classification based on extracted features."
+        ],
+        "parameters": [
+          "Depth (number of filters)",
+          "Stride (filter movement)",
+          "Zero-padding (handling borders)"
+        ],
+        "goal": "Preserve spatial relationships while extracting features."
+      },
+      {
+        "title": "Similarity Search",
+        "steps": [
+          "Present example image, sketch, or object.",
+          "System searches for images with similar meta data.",
+          "Results presented as an answer set."
+        ],
+        "types": [
+          "Browsing",
+          "Example Image",
+          "Example Object",
+          "Categories, Keywords, Concepts"
+        ]
+      },
+      {
+        "title": "Case Study: Content-Based Image Retrieval",
+        "requirements": [
+          "Web-based search interface",
+          "MongoDB for data storage",
+          "Feature extraction using tools like inception-v3, vgg16, and vgg19"
+        ],
+        "process": [
+          "Store pictures with meta data in a file collection.",
+          "Use meta data to compute similarity between pictures.",
+          "Rank and display results using deep learning models."
+        ]
+      },
+      {
+        "title": "Crowd Counting Project",
+        "tasks": [
+          "Plan architecture of the system.",
+          "Identify components and define how they work together.",
+          "Order tasks for system implementation."
+        ]
+      }
+    ],
+    "conclusion": {
+      "points": [
+        "Image databases are well understood but still need improvements in results quality and UI.",
+        "Deep Learning reduces the semantic gap.",
+        "Features of Deep Learning are not yet fully integrated into MMDBMS.",
+        "Applications have advanced features for image retrieval."
+      ]
+    }
+  }
+  

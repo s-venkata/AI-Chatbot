@@ -1,0 +1,79 @@
+{
+  "exam": {
+    "name": "Multimedia Databases",
+    "semester": "WS 2022/23",
+    "professor": "Prof. Dr. V. Sänger",
+    "date": "31.1.2023",
+    "time": "60 minutes",
+    "total_points": 45,
+    "instructions": {
+      "materials_allowed": "Dictionary",
+      "materials_not_allowed": "No further materials",
+      "response_format": "Use only the squared paper that was handed out",
+      "explanation_format": "Short but comprehensive"
+    },
+    "problems": [
+      {
+        "problem_number": 1,
+        "points": [3, 3, 3],
+        "subproblems": [
+          {
+            "description": "Given meta data for pictures P1(100, 100, 59) and P2(200, 200, 120) and query picture Q(220, 240, 20), determine which of P1 and P2 is more similar and explain why."
+          },
+          {
+            "description": "Mention two additional meta data attributes and their values for P1 and P2."
+          },
+          {
+            "description": "Explain the term semantic gap for P1 and P2."
+          }
+        ]
+      },
+      {
+        "problem_number": 2,
+        "points": [4, 4, 4, 4],
+        "subproblems": [
+          {
+            "description": "Calculate the new weight w1 of an input using the delta rule (previous value 0.3, input value 1, desired output 1, actual output 0, learning rate 0.3)."
+          },
+          {
+            "description": "Explain the term backpropagation for the neuron in part a) and for a convolutional network in general."
+          },
+          {
+            "description": "Write down the activation map for a given input to a convolutional layer and a corresponding filter (no padding)."
+          },
+          {
+            "description": "Explain the part of the network on the left side in the oval. Why are there 3 sheets or levels?"
+          }
+        ]
+      },
+      {
+        "problem_number": 3,
+        "points": [6, 3, 4],
+        "subproblems": [
+          {
+            "description": "Define relations representing the given ER schema for a video database in the form tablename(attr1, attr2, ...). Mark primary and foreign keys."
+          },
+          {
+            "description": "Write down tuples for all relations representing the object 'tiger' in scenes 12 and 25 of the video 'Wild Life'."
+          },
+          {
+            "description": "Write an SQL query to find scenes (including the time schedule) and the corresponding video name in which a tiger appears."
+          }
+        ]
+      },
+      {
+        "problem_number": 4,
+        "points": [3, 4],
+        "subproblems": [
+          {
+            "description": "List examples of video meta data that could be created in a Netflix video database using YOLO (You Only Look Once)."
+          },
+          {
+            "description": "Explain how results of the YOLO algorithm for a Netflix video can be represented and searched for in a Frame Segment tree."
+          }
+        ]
+      }
+    ]
+  },
+  "closing": "Viel Erfolg!"
+}
