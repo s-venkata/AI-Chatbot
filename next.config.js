@@ -1,20 +1,12 @@
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   output: 'export',
-//   eslint: {
-//     ignoreDuringBuilds: true,
-//   },
-//   images: { unoptimized: true },
-// };
-
-// module.exports = nextConfig;
-
-// next.config.js
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
+  output: 'export',
+  distDir: 'out',
+  images: {
+    unoptimized: true,
   },
-  images: { unoptimized: true },
+  basePath: "/AI-Chatbot", // Replace with your GitHub repo name
+  assetPrefix: "/AI-Chatbot/", // Replace with your GitHub repo name
 };
 
 module.exports = nextConfig;
